@@ -15,9 +15,7 @@ import { utf8, hex } from 'buffer-tag';
 
 You can use `utf8`, `hex`, etc has string templates:
 ```js
-assert.equal(
-  utf8`foo bar`.compareTo(Buffer.from('foo bar', 'utf8')),
-0);
+const buffer = utf8`foo bar`; //same as Buffer.from('foo bar', 'utf8');
 ```
 
 You can also embed other strings with the same encoding:
@@ -25,13 +23,13 @@ You can also embed other strings with the same encoding:
 const foobar = hex`666f6f${'626172'}`
 ```
 
-You can embed(concat) buffers:
+You can embed (which means concat) buffers:
 ```js
 const bar = utf8`bar`;
 const foobar = hex`666f6f${bar}`
 
 console.log(foobar.toString('utf8'));
-// foobar
+// outputs foobar
 ```
 
 ## Related
