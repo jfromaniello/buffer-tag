@@ -9,6 +9,9 @@
   },
   "author": "José F. Romaniello <jfromaniello@gmail.com> (https://joseoncode.com/)",
   "license": "MIT",
+  "files": [
+    "/lib"
+  ],
   "devDependencies": {
     "@types/jest": "^29.5.4",
     "@types/node": "^20.5.7",
